@@ -1,24 +1,46 @@
-import React, { useState } from 'react'
+import React from 'react'
+import Item from './item'
 
 export default function Navbar() {
-  const [menu, setMenu] = useState(false)
-
+  const items = [
+    {
+      "id": Date.now(),
+      "value": "Kudos to team",
+      "liked": false
+    },
+    {
+      "id": Date.now()+1,
+      "value": "Stuff didn't go well",
+      "liked": true  
+    }
+  ]
   return (
-    <div className={`navbar-menu ${menu ? "is-active" : ""}`}>
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="field has-addons">
-              <p className="control is-expanded">
-                <input type="text" className="input" />
-              </p>
-              <p className="control">
-                <button className="button is-info has-text-weight-bold">
-                  Add Item
+    <div>
+      <div className="field has-addons">
+        <p className="control is-expanded">
+          <input type="text" className="input" />
+        </p>
+        <p className="control">
+          <button className="button is-info has-text-weight-bold">
+            Add Item
                 </button>
-              </p>
-            </div>
+        </p>
+      </div>
+      <div>
+        <div className="hero is-info">
+          <div className="hero-body has-text-centered">
+            <p className="title is-1">Items</p>
           </div>
         </div>
+
+        <section className="section">
+          <div className="container">
+            {items.map(item => (
+              <Item key={item.id} item={item} />
+            ))}
+          </div>
+        </section>
       </div>
+    </div>
   )
 }
