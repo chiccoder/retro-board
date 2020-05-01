@@ -1,0 +1,7 @@
+TODO:
+    Up Next: Redux... https://redux.js.org/basics/example
+
+
+Notes:
+    Using Material-io: https://material-ui.com/components
+    Task List: https://trello.com/b/YswNjEUJ/project
