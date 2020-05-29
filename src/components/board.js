@@ -6,12 +6,12 @@ export default function Navbar() {
     {
       "id": Date.now(),
       "value": "Kudos to team",
-      "liked": false
+      "likes": 1
     },
     {
       "id": Date.now()+1,
       "value": "Stuff didn't go well",
-      "liked": true  
+      "likes": 0  
     }
   ]
   return (
